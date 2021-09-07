@@ -3,7 +3,9 @@ import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import {FONT, HEIGHT, WIDTH} from '../styles/Dimension';
 const VideoCard = (props) => {
   return (
-    <TouchableOpacity style={styles.card}>
+    <TouchableOpacity
+      style={styles.card}
+      accessibilityLabel={props.accessibilityLabel}>
       <Image
         source={{uri: `https://i.ytimg.com/vi/${props.videoId}/hqdefault.jpg`}}
         style={styles.imageWrapper}

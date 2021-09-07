@@ -43,16 +43,19 @@ const App = () => {
         value={keyword}
         onChangeText={(text) => setKeyword(text)}
         onPress={onSubmitKeyword}
+        searchInputAccessibilityLabel={'searchInput'}
+        searchButtonAccessibilityLabel={'searchButton'}
       />
       {loading ? <ActivityIndicator size="large" color="blue" /> : null}
       <FlatList
         data={videoData}
-        renderItem={({item}) => {
+        renderItem={({item, index}) => {
           return (
             <VideoCard
               videoId={item.id.videoId}
               title={item.snippet.title}
               channel={item.snippet.channelTitle}
+              accessibilityLabel={`videoCard-${index}`}
             />
           );
         }}

@@ -15,8 +15,12 @@ const SearchBar = (props) => {
         style={styles.textInputField}
         onChangeText={props.onChangeText}
         placeholder={props.placeholder}
+        accessibilityLabel={props.searchInputAccessibilityLabel}
       />
-      <TouchableOpacity style={styles.submitField} onPress={props.onPress}>
+      <TouchableOpacity
+        style={styles.submitField}
+        onPress={props.onPress}
+        accessibilityLabel={props.searchButtonAccessibilityLabel}>
         <Text style={FONT.inputFieldText}>Cari</Text>
       </TouchableOpacity>
     </View>
