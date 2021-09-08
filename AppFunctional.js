@@ -35,8 +35,10 @@ const App = () => {
     fetchVideoData();
   };
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={FONT.h2}>Youtube Search API</Text>
+    <SafeAreaView style={styles.container} accessibilityLabel="root">
+      <Text style={FONT.h2} accessibilityLabel="rootTitle">
+        Youtube Search API
+      </Text>
       <Text style={FONT.h3}>Functional Component with Hooks</Text>
       <SearchBar
         placeholder="Masukkan kata kunci"
@@ -55,7 +57,7 @@ const App = () => {
               videoId={item.id.videoId}
               title={item.snippet.title}
               channel={item.snippet.channelTitle}
-              accessibilityLabel={`videoCard-${index}`}
+              accessibilityLabel="videoCard"
             />
           );
         }}
