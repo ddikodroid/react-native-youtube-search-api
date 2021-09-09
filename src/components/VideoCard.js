@@ -11,8 +11,8 @@ const VideoCard = (props) => {
         style={styles.imageWrapper}
       />
       <View style={styles.infoWrapper}>
-        <Text style={FONT.h3}>{props.title}</Text>
-        <Text style={FONT.body4}>{props.channel}</Text>
+        <Text style={FONT.h3} accessibilityLabel='videoCardTitle'>{props.title}</Text>
+        <Text style={FONT.body4} accessibilityLabel='videoCardChannel'>{props.channel}</Text>
       </View>
     </TouchableOpacity>
   );
